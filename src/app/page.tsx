@@ -379,14 +379,14 @@ export default function Home() {
 
         {/* PDF Viewer */}
         <object
-          data={resumePDF}
+          data={resumePDF.src}
           type="application/pdf"
           className="w-full h-full rounded-lg"
         >
           <div className="flex flex-col items-center justify-center h-full">
             <p className="text-gray-600 mb-4">Unable to display PDF file.</p>
             <a
-              href={resumePDF}
+              href={resumePDF.src}
               download="DinilDulneth_Resume.pdf"
               className="text-blue-600 hover:text-blue-800 underline"
             >
@@ -397,7 +397,7 @@ export default function Home() {
 
         {/* Download button */}
         <a
-          href={resumePDF}
+          href={resumePDF.src}
           download="DinilDulneth_Resume.pdf"
           className="absolute bottom-4 right-4"
           onClick={(e) => e.stopPropagation()}
