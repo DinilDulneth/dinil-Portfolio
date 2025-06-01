@@ -1,36 +1,137 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Dinil Dulneth's Portfolio
 
-## Getting Started
+## Overview
+A modern, responsive portfolio website showcasing my software engineering journey and technical expertise. Built with Next.js 13, React 18, TypeScript, and Tailwind CSS, featuring a dynamic user interface with smooth animations and dark/light mode support.
 
-First, run the development server:
+## Key Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### 🎨 Modern Design & Architecture
+- **Tech Stack**: Next.js 13, React 18, TypeScript, Tailwind CSS, Framer Motion
+- **Responsive Design**: Seamlessly adapts to all device sizes and screen orientations
+- **Dark/Light Mode**: User-toggleable theme with smooth transitions
+- **Animated UI**: Engaging animations and transitions using Framer Motion
+- **Performance Optimized**: Fast loading times and optimized asset delivery
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 📱 User Interface Components
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+#### Hero Section
+- Dynamic star field animation
+- Professional profile picture with loading states
+- Smooth scroll transitions
+- Responsive typography and layout
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+#### About Section
+- Interactive skill cards with hover effects
+- Animated background with floating particles
+- Location information with map pin
+- Social media integration
 
-## Learn More
+#### Skills Section
+- Categorized technical skills
+- Visual skill indicators
+- Animated progress bars
+- Detailed technology breakdowns
 
-To learn more about Next.js, take a look at the following resources:
+#### Projects Section
+- Detailed project cards with gradients
+- Technology badges
+- Project descriptions and links
+- GitHub repository connections
+- Live demo links where available
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+#### Contact Section
+- Direct email integration
+- Social media links
+- Professional contact form
+- Location information
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### 💻 Technical Implementation
 
-## Deploy on Vercel
+#### Performance Optimizations
+- Lazy loading of images and components
+- Optimized asset delivery
+- Efficient state management
+- Smooth animations with minimal impact
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+#### Code Quality
+- TypeScript for type safety
+- Component-based architecture
+- Reusable UI components
+- Clean and maintainable code structure
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+#### Accessibility
+- ARIA labels for screen readers
+- Keyboard navigation support
+- Color contrast compliance
+- Semantic HTML structure
+
+## Project Highlights
+
+### Featured Projects
+1. Food Ordering System
+   - Full-stack PHP application
+   - Real-time chat feature
+   - Admin dashboard
+   - Payment integration
+
+2. WorkForce Management System
+   - MERN stack implementation
+   - JWT authentication
+   - Real-time updates
+   - Comprehensive admin features
+
+3. E-learn Video Platform
+   - Video streaming platform
+   - Content monetization
+   - Role-based access control
+   - Secure content delivery
+
+4. Mobile Applications
+   - Kotlin-based development
+   - Native Android features
+   - SQLite integration
+   - Performance optimization
+
+## Technical Skills Showcase
+
+### Frontend Development
+- React/Next.js expertise
+- TypeScript implementation
+- Tailwind CSS styling
+- Responsive design patterns
+
+### Backend Development
+- Node.js/Express.js
+- MongoDB integration
+- RESTful API design
+- Security implementation
+
+### DevOps & Tools
+- Git version control
+- CI/CD implementation
+- Docker containerization
+- AWS cloud services
+
+## Portfolio Impact
+- Demonstrates full-stack development capabilities
+- Showcases modern web development practices
+- Highlights project management skills
+- Displays attention to detail and user experience
+
+## Future Enhancements
+- Blog section for technical articles
+- Enhanced project analytics
+- Additional interactive features
+- Expanded project documentation
+
+## Professional Contact
+- Email: dinildulneth123@gmail.com
+- GitHub: [DinilDulneth](https://github.com/DinilDulneth)
+- LinkedIn: [Dinil Dulneth LiyanaArachchi](https://linkedin.com/in/dinil-dulneth-liyanaarachchi)
+- Location: Malabe, Sri Lanka
+
+Last Updated: 2025-06-01
+
+---
+
+Built with 💻 by Dinil Dulneth LiyanaArachchi
