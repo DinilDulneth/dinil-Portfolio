@@ -1,26 +1,352 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  height: 100%;
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+}
+#stars {
+  width: 1px;
+  height: 1px;
+  background: transparent;
+  box-shadow: 1234px 567px #fff, 456px 789px #fff, 891px 234px #fff,
+    /* Reduced to a few for brevity */ 1678px 345px #fff, 234px 1234px #fff,
+    789px 1567px #fff, 345px 890px #fff, 123px 1678px #fff, 1567px 456px #fff,
+    890px 123px #fff; /* Represents 700 stars */
+  animation: animStar 50s linear infinite;
+}
+
+#stars:after {
+  content: " ";
+  position: absolute;
+  top: 2000px;
+  width: 1px;
+  height: 1px;
+  background: transparent;
+  box-shadow: 1234px 567px #fff, 456px 789px #fff, 891px 234px #fff,
+    1678px 345px #fff, 234px 1234px #fff, 789px 1567px #fff, 345px 890px #fff,
+    123px 1678px #fff, 1567px 456px #fff, 890px 123px #fff;
+}
+
+#stars2 {
+  width: 2px;
+  height: 2px;
+  background: transparent;
+  box-shadow: 567px 1234px #fff, 789px 456px #fff, 234px 891px #fff,
+    /* Represents 200 stars */ 345px 1678px #fff, 1234px 234px #fff,
+    1567px 789px #fff, 890px 345px #fff;
+  animation: animStar 100s linear infinite;
+}
+
+#stars2:after {
+  content: " ";
+  position: absolute;
+  top: 2000px;
+  width: 2px;
+  height: 2px;
+  background: transparent;
+  box-shadow: 567px 1234px #fff, 789px 456px #fff, 234px 891px #fff,
+    345px 1678px #fff, 1234px 234px #fff, 1567px 789px #fff, 890px 345px #fff;
+}
+
+#stars3 {
+  width: 3px;
+  height: 3px;
+  background: transparent;
+  box-shadow: 123px 567px #fff, 456px 789px #fff, 891px 234px #fff,
+    /* Represents 100 stars */ 1678px 345px #fff;
+  animation: animStar 150s linear infinite;
+}
+
+#stars3:after {
+  content: " ";
+  position: absolute;
+  top: 2000px;
+  width: 3px;
+  height: 3px;
+  background: transparent;
+  box-shadow: 123px 567px #fff, 456px 789px #fff, 891px 234px #fff,
+    1678px 345px #fff;
+}
+#stars4 {
+  width: 3px;
+  height: 3px;
+  background: transparent;
+  box-shadow: 153px 567px #fff, 466px 789px #fff, 591px 134px #fff,
+    /* Represents 100 stars */ 1178px 345px #fff;
+  animation: animStar 150s linear infinite;
+}
+
+#stars4:after {
+  content: " ";
+  position: absolute;
+  top: 2000px;
+  width: 3px;
+  height: 3px;
+  background: transparent;
+  box-shadow: 123px 567px #fff, 356px 689px #fff, 191px 334px #fff,
+    1678px 345px #fff;
+}
+#stars5 {
+  width: 4px;
+  height: 4px;
+  background: transparent;
+  box-shadow: 340px 420px #fff, 700px 1580px #fff, 1800px 300px #fff,
+    520px 1340px #fff, 1480px 870px #fff, 160px 980px #fff;
+  animation: animStar 180s linear infinite;
+}
+
+#stars5:after {
+  content: " ";
+  position: absolute;
+  top: 2000px;
+  width: 4px;
+  height: 4px;
+  background: transparent;
+  box-shadow: 420px 1180px #fff, 1200px 200px #fff, 1680px 750px #fff,
+    970px 1350px #fff, 600px 1700px #fff, 100px 1250px #fff;
+}
+
+#stars6 {
+  width: 5px;
+  height: 5px;
+  background: transparent;
+  box-shadow: 320px 1680px #fff, 1450px 940px #fff, 190px 1000px #fff,
+    1380px 740px #fff, 720px 300px #fff, 990px 1600px #fff;
+  animation: animStar 200s linear infinite;
+}
+
+#stars6:after {
+  content: " ";
+  position: absolute;
+  top: 2000px;
+  width: 5px;
+  height: 5px;
+  background: transparent;
+  box-shadow: 860px 960px #fff, 1550px 1100px #fff, 1100px 330px #fff,
+    1430px 820px #fff, 380px 620px #fff, 250px 1500px #fff;
+}
+
+#stars7 {
+  width: 6px;
+  height: 6px;
+  background: transparent;
+  box-shadow: 980px 880px #fff, 1330px 1440px #fff, 470px 1230px #fff,
+    180px 200px #fff, 1600px 600px #fff;
+  animation: animStar 250s linear infinite;
+}
+
+#stars7:after {
+  content: " ";
+  position: absolute;
+  top: 2000px;
+  width: 6px;
+  height: 6px;
+  background: transparent;
+  box-shadow: 500px 1580px #fff, 770px 720px #fff, 1240px 540px #fff,
+    1340px 1380px #fff, 390px 310px #fff;
+}
+#title {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  color: #fff;
+  text-align: center;
+  font-family: "Lato", sans-serif;
+  transform: translateY(-50%);
+  padding: 0 20px;
+}
+.titleName {
+  background: -webkit-linear-gradient(white, #587088);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+@keyframes animStar {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-2000px);
+  }
+}
+/* @keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.5s ease-out forwards;
+}
+
+.delay-200 {
+  animation-delay: 200ms;
+}
+
+.delay-300 {
+  animation-delay: 300ms;
+}
+
+.delay-400 {
+  animation-delay: 400ms;
+} */
+
+/* ...existing styles... */
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Responsive image transitions */
+.image-container {
+  @apply relative overflow-hidden;
+}
+
+.image-container img {
+  @apply transition-all duration-300;
+}
+
+/* Loading animation */
+.loading-spinner {
+  @apply animate-spin rounded-full border-t-2 border-b-2 border-white;
+}
+
+/* Light mode styles */
+.light-mode {
+  background: linear-gradient(to bottom, #f0f4f8, #ffffff);
+}
+
+.light-mode #stars,
+.light-mode #stars2,
+.light-mode #stars3 {
+  display: none;
+}
+
+.light {
+  --background: #ffffff;
+  --foreground: #1a1a1a;
+}
+
+.dark {
+  --background: #1b2735;
+  --foreground: #ffffff;
+}
+
+/* Add responsive hover effects for skill cards */
+.card-hover-effect {
+  transition: all 0.3s ease;
+}
+
+.card-hover-effect:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Enhance mobile responsiveness */
+@media (max-width: 640px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  /* Increase touch targets on mobile */
+  button {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
+
+/* Improved card transitions */
+.group:hover .group-hover\:opacity-100 {
+  opacity: 1;
+}
+
+.group:hover .group-hover\:scale-105 {
+  transform: scale(1.05);
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.5s ease-in;
+}
+
+.animate-slideUp {
+  animation: slideUp 0.5s ease-out;
+}
+
+.walkthrough {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  list-style-type: none;
+  padding: 0;
+}
+
+.walkthrough li {
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.walkthrough li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #2563eb;
+  font-size: 1.5rem;
+  line-height: 1.2;
+}
+
+.modal {
+  z-index: 10;
 }

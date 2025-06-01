@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Parallax Starfield Animation</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      html {
+        height: 100%;
+        background: radial-gradient(
+          ellipse at bottom,
+          #1b2735 0%,
+          #090a0f 100%
+        );
+        overflow: hidden;
+      }
+
+      #stars {
+        width: 1px;
+        height: 1px;
+        background: transparent;
+        box-shadow: 1234px 567px #fff, 456px 789px #fff, 891px 234px #fff,
+          /* Reduced to a few for brevity */ 1678px 345px #fff,
+          234px 1234px #fff, 789px 1567px #fff, 345px 890px #fff,
+          123px 1678px #fff, 1567px 456px #fff, 890px 123px #fff; /* Represents 700 stars */
+        animation: animStar 50s linear infinite;
+      }
+
+      #stars:after {
+        content: " ";
+        position: absolute;
+        top: 2000px;
+        width: 1px;
+        height: 1px;
+        background: transparent;
+        box-shadow: 1234px 567px #fff, 456px 789px #fff, 891px 234px #fff,
+          1678px 345px #fff, 234px 1234px #fff, 789px 1567px #fff,
+          345px 890px #fff, 123px 1678px #fff, 1567px 456px #fff,
+          890px 123px #fff;
+      }
+
+      #stars2 {
+        width: 2px;
+        height: 2px;
+        background: transparent;
+        box-shadow: 567px 1234px #fff, 789px 456px #fff, 234px 891px #fff,
+          /* Represents 200 stars */ 345px 1678px #fff, 1234px 234px #fff,
+          1567px 789px #fff, 890px 345px #fff;
+        animation: animStar 100s linear infinite;
+      }
+
+      #stars2:after {
+        content: " ";
+        position: absolute;
+        top: 2000px;
+        width: 2px;
+        height: 2px;
+        background: transparent;
+        box-shadow: 567px 1234px #fff, 789px 456px #fff, 234px 891px #fff,
+          345px 1678px #fff, 1234px 234px #fff, 1567px 789px #fff,
+          890px 345px #fff;
+      }
+
+      #stars3 {
+        width: 3px;
+        height: 3px;
+        background: transparent;
+        box-shadow: 123px 567px #fff, 456px 789px #fff, 891px 234px #fff,
+          /* Represents 100 stars */ 1678px 345px #fff;
+        animation: animStar 150s linear infinite;
+      }
+
+      #stars3:after {
+        content: " ";
+        position: absolute;
+        top: 2000px;
+        width: 3px;
+        height: 3px;
+        background: transparent;
+        box-shadow: 123px 567px #fff, 456px 789px #fff, 891px 234px #fff,
+          1678px 345px #fff;
+      }
+
+      #title {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        color: #fff;
+        text-align: center;
+        font-family: "Lato", sans-serif;
+        font-weight: 300;
+        font-size: 50px;
+        letter-spacing: 10px;
+        margin-top: -60px;
+        padding-left: 10px;
+      }
+
+      #title span {
+        background: -webkit-linear-gradient(white, #38495a);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+      }
+
+      @keyframes animStar {
+        from {
+          transform: translateY(0px);
+        }
+        to {
+          transform: translateY(-2000px);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>
+    <div id="title">
+      <span>UNIVERSE</span>
+    </div>
+  </body>
+</html>
