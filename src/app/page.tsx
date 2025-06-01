@@ -38,6 +38,20 @@ import resumePDF from "../public/Image/profilePic.png";
 export default function Home() {
   const [imageLoading, setImageLoading] = useState(true);
   const [isDarkMode, setIsDarkMode] = useState(true);
+  interface Project {
+    title: string;
+    type: string;
+    status: string;
+    description: string;
+    technologies: string[];
+    gradient: string;
+    details: string[];
+    implementation?: string[];
+    challengesSolved?: string[];
+    githubUrl?: string;
+    demoUrl?: string;
+    lastUpdated: string;
+  }
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const projectsRef = useRef<HTMLDivElement>(null);
   const [showResume, setShowResume] = useState(false);
