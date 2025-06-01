@@ -32,8 +32,8 @@ import {
 import { Badge } from "../components/ui/badge/badge";
 import Image from "next/image";
 import profilePic from "../public/Image/profilePic.png";
-import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import resumePDF from "../public/Image/profilePic.png";
+import { NetworkBackground } from "../components/NetworkBackground";
 
 export default function Home() {
   const [imageLoading, setImageLoading] = useState(true);
@@ -433,90 +433,90 @@ export default function Home() {
   );
 
   // Add this function outside your component for the network animation
-  const createNetworkBackground = (
-    canvas: HTMLCanvasElement,
-    isDarkMode: boolean
-  ) => {
-    const ctx = canvas.getContext("2d");
-    if (!ctx) return;
+  // const createNetworkBackground = (
+  //   canvas: HTMLCanvasElement,
+  //   isDarkMode: boolean
+  // ) => {
+  //   const ctx = canvas.getContext("2d");
+  //   if (!ctx) return;
 
-    // Set canvas size
-    const resizeCanvas = () => {
-      canvas.width = canvas.offsetWidth;
-      canvas.height = canvas.offsetHeight;
-    };
-    resizeCanvas();
-    window.addEventListener("resize", resizeCanvas);
+  //   // Set canvas size
+  //   const resizeCanvas = () => {
+  //     canvas.width = canvas.offsetWidth;
+  //     canvas.height = canvas.offsetHeight;
+  //   };
+  //   resizeCanvas();
+  //   window.addEventListener("resize", resizeCanvas);
 
-    // Node properties
-    const nodes: { x: number; y: number; vx: number; vy: number }[] = [];
-    const nodeCount = 50;
-    const nodeRadius = 2;
-    const connectionDistance = 150;
+  //   // Node properties
+  //   const nodes: { x: number; y: number; vx: number; vy: number }[] = [];
+  //   const nodeCount = 50;
+  //   const nodeRadius = 2;
+  //   const connectionDistance = 150;
 
-    // Create nodes
-    for (let i = 0; i < nodeCount; i++) {
-      nodes.push({
-        x: Math.random() * canvas.width,
-        y: Math.random() * canvas.height,
-        vx: (Math.random() - 0.5) * 0.5,
-        vy: (Math.random() - 0.5) * 0.5
-      });
-    }
+  //   // Create nodes
+  //   for (let i = 0; i < nodeCount; i++) {
+  //     nodes.push({
+  //       x: Math.random() * canvas.width,
+  //       y: Math.random() * canvas.height,
+  //       vx: (Math.random() - 0.5) * 0.5,
+  //       vy: (Math.random() - 0.5) * 0.5
+  //     });
+  //   }
 
-    // Animation function
-    const animate = () => {
-      if (!ctx) return;
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
+  //   // Animation function
+  //   const animate = () => {
+  //     if (!ctx) return;
+  //     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-      // Update and draw nodes
-      nodes.forEach((node) => {
-        // Update position
-        node.x += node.vx;
-        node.y += node.vy;
+  //     // Update and draw nodes
+  //     nodes.forEach((node) => {
+  //       // Update position
+  //       node.x += node.vx;
+  //       node.y += node.vy;
 
-        // Bounce off edges
-        if (node.x < 0 || node.x > canvas.width) node.vx *= -1;
-        if (node.y < 0 || node.y > canvas.height) node.vy *= -1;
+  //       // Bounce off edges
+  //       if (node.x < 0 || node.x > canvas.width) node.vx *= -1;
+  //       if (node.y < 0 || node.y > canvas.height) node.vy *= -1;
 
-        // Draw node
-        ctx.beginPath();
-        ctx.arc(node.x, node.y, nodeRadius, 0, Math.PI * 2);
-        ctx.fillStyle = isDarkMode
-          ? "rgba(255, 255, 255, 0.5)"
-          : "rgba(0, 0, 0, 0.3)";
-        ctx.fill();
-      });
+  //       // Draw node
+  //       ctx.beginPath();
+  //       ctx.arc(node.x, node.y, nodeRadius, 0, Math.PI * 2);
+  //       ctx.fillStyle = isDarkMode
+  //         ? "rgba(255, 255, 255, 0.5)"
+  //         : "rgba(0, 0, 0, 0.3)";
+  //       ctx.fill();
+  //     });
 
-      // Draw connections
-      nodes.forEach((nodeA, i) => {
-        nodes.slice(i + 1).forEach((nodeB) => {
-          const dx = nodeA.x - nodeB.x;
-          const dy = nodeA.y - nodeB.y;
-          const distance = Math.sqrt(dx * dx + dy * dy);
+  //     // Draw connections
+  //     nodes.forEach((nodeA, i) => {
+  //       nodes.slice(i + 1).forEach((nodeB) => {
+  //         const dx = nodeA.x - nodeB.x;
+  //         const dy = nodeA.y - nodeB.y;
+  //         const distance = Math.sqrt(dx * dx + dy * dy);
 
-          if (distance < connectionDistance) {
-            const opacity = 1 - distance / connectionDistance;
-            ctx.beginPath();
-            ctx.moveTo(nodeA.x, nodeA.y);
-            ctx.lineTo(nodeB.x, nodeB.y);
-            ctx.strokeStyle = isDarkMode
-              ? `rgba(147, 51, 234, ${opacity * 0.2})` // Purple in dark mode
-              : `rgba(79, 70, 229, ${opacity * 0.1})`; // Indigo in light mode
-            ctx.stroke();
-          }
-        });
-      });
+  //         if (distance < connectionDistance) {
+  //           const opacity = 1 - distance / connectionDistance;
+  //           ctx.beginPath();
+  //           ctx.moveTo(nodeA.x, nodeA.y);
+  //           ctx.lineTo(nodeB.x, nodeB.y);
+  //           ctx.strokeStyle = isDarkMode
+  //             ? `rgba(147, 51, 234, ${opacity * 0.2})` // Purple in dark mode
+  //             : `rgba(79, 70, 229, ${opacity * 0.1})`; // Indigo in light mode
+  //           ctx.stroke();
+  //         }
+  //       });
+  //     });
 
-      requestAnimationFrame(animate);
-    };
+  //     requestAnimationFrame(animate);
+  //   };
 
-    animate();
+  //   animate();
 
-    return () => {
-      window.removeEventListener("resize", resizeCanvas);
-    };
-  };
+  //   return () => {
+  //     window.removeEventListener("resize", resizeCanvas);
+  //   };
+  // };
   return (
     <main className={`relative ${isDarkMode ? "dark" : "light"}`}>
       {/* Theme Toggle and Additional Controls */}
@@ -1199,15 +1199,9 @@ export default function Home() {
               : "linear-gradient(to left, rgb(199, 206, 224), rgb(163, 192, 255))"
           }}
         >
-          {/* Network Background Canvas */}
-          <canvas
-            className="absolute inset-0 w-full h-full"
-            ref={(canvas) => {
-              if (canvas) {
-                createNetworkBackground(canvas, isDarkMode);
-              }
-            }}
-          />
+          <NetworkBackground isDarkMode={isDarkMode} />
+          {/* Rest of your section content */}
+
           {/* Content with relative positioning */}
           <div className="relative z-10 max-w-6xl mx-auto">
             <h2
