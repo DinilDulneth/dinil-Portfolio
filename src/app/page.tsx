@@ -1,7 +1,7 @@
 "use client";
 import { motion, useInView, useScroll, useTransform } from "framer-motion";
 // import { useInView } from "react-intersection-observer";
-import { useRef, useState, useEffect } from "react";
+import { useRef, useState } from "react";
 import React from "react";
 import "./globals.css";
 import { Button } from "../components/ui/button";
@@ -9,7 +9,7 @@ import {
   Card,
   CardHeader as CardHeaderComponent,
   CardTitle,
-  CardContent,
+  CardContent
 } from "../components/ui/card";
 import {
   Github,
@@ -24,10 +24,9 @@ import {
   Smartphone,
   Sun,
   Moon,
-  Server,
   Cloud,
   Wrench,
-  HardDrive,
+  HardDrive
 } from "lucide-react";
 
 import { Badge } from "../components/ui/badge/badge";
@@ -54,7 +53,7 @@ export default function Home() {
   const aboutRef = useRef(null);
   const skillsRef = useRef(null);
   const inView = useInView(aboutRef, { margin: "-100px" });
-  const inViewnew = useInView(skillsRef, { margin: "-100px" });
+  // const inViewnew = useInView(skillsRef, { margin: "-100px" });
   const toggleTheme = () => {
     setIsDarkMode(!isDarkMode);
     document.documentElement.classList.toggle("dark");
@@ -63,7 +62,7 @@ export default function Home() {
   const scrollToProjects = () => {
     projectsRef.current?.scrollIntoView({
       behavior: "smooth",
-      block: "start",
+      block: "start"
     });
   };
 
@@ -76,15 +75,15 @@ export default function Home() {
       transition: {
         delay: i * 0.2,
         duration: 0.6,
-        ease: "easeOut",
-      },
-    }),
+        ease: "easeOut"
+      }
+    })
   };
 
   // Scroll progress for Hero Section animations
   const { scrollYProgress } = useScroll({
     target: scrollRef,
-    offset: ["start start", "end start"],
+    offset: ["start start", "end start"]
   });
 
   // Transform scroll progress into animations
@@ -108,22 +107,22 @@ export default function Home() {
       details: [
         "User chat system for real-time communication",
         "Clean and intuitive dashboard for admins and users",
-        "Well-integrated order flow from browsing to delivery",
+        "Well-integrated order flow from browsing to delivery"
       ],
       implementation: [
         "Implemented secure user authentication and session management",
         "Developed real-time chat feature using AJAX and WebSockets",
         "Created responsive admin dashboard with data visualization",
-        "Integrated secure payment gateway for online transactions",
+        "Integrated secure payment gateway for online transactions"
       ],
       challengesSolved: [
         "Optimized database queries for faster menu loading times",
         "Implemented caching system to reduce server load",
-        "Enhanced security with input validation and SQL injection prevention",
+        "Enhanced security with input validation and SQL injection prevention"
       ],
       githubUrl: "https://github.com/DinilDulneth/Food-Ordering-System",
       demoUrl: "",
-      lastUpdated: "2023-12-01",
+      lastUpdated: "2023-12-01"
     },
     {
       title: "Chat Box",
@@ -136,22 +135,22 @@ export default function Home() {
       details: [
         "Real-time message flow using AJAX",
         "Clean and responsive UI design",
-        "Easily integrable with other platforms",
+        "Easily integrable with other platforms"
       ],
       implementation: [
         "Built real-time messaging system using AJAX long polling",
         "Implemented message history and chat room features",
         "Created responsive UI with modern CSS frameworks",
-        "Added typing indicators and message status updates",
+        "Added typing indicators and message status updates"
       ],
       challengesSolved: [
         "Optimized message delivery for minimal latency",
         "Implemented efficient message storage system",
-        "Added support for emoji and file sharing",
+        "Added support for emoji and file sharing"
       ],
       githubUrl: "https://github.com/DinilDulneth/Chat-Box",
       demoUrl: "",
-      lastUpdated: "2023-11-15",
+      lastUpdated: "2023-11-15"
     },
     {
       title: "E-learn Video Platform",
@@ -164,22 +163,22 @@ export default function Home() {
       details: [
         "Supports monetized content access",
         "Distinct user roles for teachers and students",
-        "Secure video upload and streaming",
+        "Secure video upload and streaming"
       ],
       implementation: [
         "Built secure video streaming system",
         "Implemented role-based access control",
         "Created payment integration for premium content",
-        "Developed content management system for teachers",
+        "Developed content management system for teachers"
       ],
       challengesSolved: [
         "Implemented efficient video streaming with adaptive bitrate",
         "Created secure content protection system",
-        "Optimized video storage and delivery",
+        "Optimized video storage and delivery"
       ],
       githubUrl: "https://github.com/DinilDulneth/E-learn-Video-Platform",
       demoUrl: "",
-      lastUpdated: "2023-10-30",
+      lastUpdated: "2023-10-30"
     },
     {
       title: "Financial Tracker App",
@@ -192,22 +191,22 @@ export default function Home() {
       details: [
         "Intuitive interface for financial management",
         "Local SQLite storage for data persistence",
-        "Daily and monthly expense tracking",
+        "Daily and monthly expense tracking"
       ],
       implementation: [
         "Built native Android app using Kotlin",
         "Implemented local database using SQLite",
         "Created data visualization for expense analysis",
-        "Added budget planning and reminder features",
+        "Added budget planning and reminder features"
       ],
       challengesSolved: [
         "Optimized app performance for older devices",
         "Implemented secure data storage",
-        "Added data backup and restore functionality",
+        "Added data backup and restore functionality"
       ],
       githubUrl: "https://github.com/DinilDulneth/Financial-Tracker",
       demoUrl: "",
-      lastUpdated: "2023-09-15",
+      lastUpdated: "2023-09-15"
     },
     {
       title: "WorkForce Management System",
@@ -220,22 +219,22 @@ export default function Home() {
       details: [
         "Admin dashboard with employee data and stats",
         "Role-based access for admins, managers, and employees",
-        "Secure authentication and task management",
+        "Secure authentication and task management"
       ],
       implementation: [
         "Developed full-stack application using MERN stack",
         "Implemented JWT authentication",
         "Created real-time updates using Socket.io",
-        "Built comprehensive admin dashboard",
+        "Built comprehensive admin dashboard"
       ],
       challengesSolved: [
         "Optimized database queries for large datasets",
         "Implemented efficient state management",
-        "Added automated reporting system",
+        "Added automated reporting system"
       ],
       githubUrl: "https://github.com/DinilDulneth/WorkForce-Management",
       demoUrl: "",
-      lastUpdated: "2023-12-15",
+      lastUpdated: "2023-12-15"
     },
     {
       title: "Portfolio Website",
@@ -248,30 +247,30 @@ export default function Home() {
         "React",
         "Tailwind CSS",
         "TypeScript",
-        "Framer Motion",
+        "Framer Motion"
       ],
       gradient: "from-purple-500 to-pink-500",
       details: [
         "Responsive design with dark/light mode",
         "Smooth animations and transitions",
         "Project showcase with detailed modals",
-        "Interactive UI elements",
+        "Interactive UI elements"
       ],
       implementation: [
         "Built with Next.js 13 and React 18",
         "Implemented responsive design using Tailwind CSS",
         "Added animations using Framer Motion",
-        "Created reusable components and custom hooks",
+        "Created reusable components and custom hooks"
       ],
       challengesSolved: [
         "Optimized performance and loading times",
         "Implemented smooth theme switching",
-        "Created responsive layouts for all devices",
+        "Created responsive layouts for all devices"
       ],
       githubUrl: "https://github.com/DinilDulneth/Web-Site",
       demoUrl: "https://dinildulneth.github.io/Web-Site/",
-      lastUpdated: "2024-01-15",
-    },
+      lastUpdated: "2024-01-15"
+    }
   ];
 
   const skillCards = [
@@ -283,30 +282,30 @@ export default function Home() {
       details: [
         "React - Next.js - TypeScript",
         "Razor - Blazor",
-        "HTML/CSS/Tailwind CSS/Bootstrap",
-      ],
+        "HTML/CSS/Tailwind CSS/Bootstrap"
+      ]
     },
     {
       icon: Database,
       title: "System",
       subtitle: "Database",
       iconColor: "text-green-500",
-      details: ["MySQL - SQL", "MongoDB", "T-SQL"],
+      details: ["MySQL - SQL", "MongoDB", "T-SQL"]
     },
     {
       icon: Globe,
       title: "Web",
       subtitle: "Applications",
       iconColor: "text-purple-500",
-      details: ["MERN & MEAN Stack", "Laravel", ".NET"],
+      details: ["MERN & MEAN Stack", "Laravel", ".NET"]
     },
     {
       icon: Smartphone,
       title: "Mobile",
       subtitle: "Development",
       iconColor: "text-pink-500",
-      details: ["Kotlin", "Flutter"],
-    },
+      details: ["Kotlin", "Flutter"]
+    }
   ];
 
   // Variants for buttons
@@ -319,8 +318,8 @@ export default function Home() {
         duration: 0.5,
         ease: "easeOut",
         type: "spring",
-        stiffness: 120,
-      },
+        stiffness: 120
+      }
     },
     hover: {
       scale: 1,
@@ -329,16 +328,9 @@ export default function Home() {
       //   : "0 0 15px rgba(0, 0, 0, 0.2)",
       transition: {
         duration: 0.2,
-        yoyo: Infinity,
-      },
-    },
-  };
-  const handleOpenModal = (project) => {
-    setSelectedProject(project);
-    const modal = new window.bootstrap.Modal(
-      document.getElementById("projectModal")
-    );
-    modal.show();
+        yoyo: Infinity
+      }
+    }
   };
   // Add this modal component for the resume
   // Update the ResumeModal component
@@ -454,7 +446,7 @@ export default function Home() {
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
         vx: (Math.random() - 0.5) * 0.5,
-        vy: (Math.random() - 0.5) * 0.5,
+        vy: (Math.random() - 0.5) * 0.5
       });
     }
 
@@ -554,7 +546,7 @@ export default function Home() {
         ref={scrollRef}
         className="min-h-screen fixed inset-0"
         style={{
-          filter: blur, // Apply blur transform
+          filter: blur // Apply blur transform
           // scale: scale, // Apply scale transform
           // opacity: opacity, // Apply opacity transform
         }}
@@ -617,9 +609,9 @@ export default function Home() {
                   Software Engineer | Full Stack Developer
                 </p>
                 <p className="text-lg mb-4 max-w-2xl mx-auto opacity-70 animate-fade-in-up delay-400 text-white">
-                  I'm a tech enthusiast passionate about building scalable web
-                  apps using modern tools. I enjoy writing clean, maintainable
-                  code and creating smooth user experiences.
+                  I&apos;m a tech enthusiast passionate about building scalable
+                  web apps using modern tools. I enjoy writing clean,
+                  maintainable code and creating smooth user experiences.
                 </p>
                 <p className="text-lg mb-8 max-w-2xl mx-auto opacity-70 animate-fade-in-up delay-600 text-white">
                   Always eager to collaborate, innovate, and push the limits of
@@ -662,7 +654,7 @@ export default function Home() {
                     radial-gradient(circle at 20% 35%, rgba(219, 234, 254, 0.4) 0%, transparent 50%),
                     radial-gradient(circle at 75% 44%, rgba(199, 210, 254, 0.4) 0%, transparent 50%),
                     radial-gradient(circle at 45% 80%, rgba(224, 231, 255, 0.4) 0%, transparent 50%)
-                  `,
+                  `
               }}
             />
 
@@ -682,7 +674,7 @@ export default function Home() {
                                 } 1px, transparent 1px)`,
                 backgroundSize: "50px 50px",
                 animation: "moveGrid 15s linear infinite",
-                opacity: 0.5,
+                opacity: 0.5
               }}
             />
 
@@ -702,7 +694,7 @@ export default function Home() {
                     animation: `float ${
                       Math.random() * 10 + 10
                     }s linear infinite`,
-                    animationDelay: `-${Math.random() * 10}s`,
+                    animationDelay: `-${Math.random() * 10}s`
                   }}
                 />
               ))}
@@ -762,7 +754,7 @@ export default function Home() {
                       isDarkMode ? "text-white" : "text-black"
                     }`}
                   >
-                    I'm a passionate and driven Software Engineering
+                    I&apos;m a passionate and driven Software Engineering
                     undergraduate from SLIIT, currently interning at Techwire
                     Pvt Ltd. With hands-on experience in web and mobile
                     development, I specialize in creating user-centric solutions
@@ -773,10 +765,10 @@ export default function Home() {
                       isDarkMode ? "text-white" : "text-black"
                     }`}
                   >
-                    I'm responsible for maintaining and enhancing systems at
-                    Norochcholai Power Plant, blending real-world impact with
+                    I&apos;m responsible for maintaining and enhancing systems
+                    at Norochcholai Power Plant, blending real-world impact with
                     technical skills. I enjoy solving real problems with code,
-                    and I'm always eager to learn, collaborate, and take on
+                    and I&apos;m always eager to learn, collaborate, and take on
                     challenges that push me forward.
                   </p>
                   <div
@@ -877,9 +869,9 @@ export default function Home() {
                 visible: {
                   opacity: 1,
                   transition: {
-                    staggerChildren: 0.2,
-                  },
-                },
+                    staggerChildren: 0.2
+                  }
+                }
               }}
             >
               <a
@@ -951,7 +943,7 @@ export default function Home() {
               ? "linear-gradient(135deg,rgb(30, 36, 44) 0%,rgb(6, 38, 87) 100%)"
               : "linear-gradient(135deg, #ccfbf1 0%, #bfdbfe 100%)",
             position: "relative",
-            zIndex: 1,
+            zIndex: 1
           }}
         >
           {/* Background Elements: Network Lines and Glowing Nodes */}
@@ -974,7 +966,7 @@ export default function Home() {
       `,
               // backgroundSize: "25px 25px",
               opacity: 0.5,
-              animation: "connectLines 10s ease-in-out infinite",
+              animation: "connectLines 10s ease-in-out infinite"
             }}
           />
           <div
@@ -1002,7 +994,7 @@ export default function Home() {
       `,
               filter: "blur(8px)",
               opacity: isDarkMode ? 0.45 : 0.3,
-              animation: "glowNodes 7s ease-in-out infinite",
+              animation: "glowNodes 7s ease-in-out infinite"
             }}
           />
           <style jsx>{`
@@ -1036,7 +1028,7 @@ export default function Home() {
                 duration: 1,
                 type: "spring",
                 stiffness: 150,
-                damping: 16,
+                damping: 16
               }}
               className={`text-4xl font-bold text-center mb-16 ${
                 isDarkMode ? "text-white" : "text-gray-800"
@@ -1044,7 +1036,7 @@ export default function Home() {
               style={{
                 textShadow: isDarkMode
                   ? "0 0 15px rgba(45, 212, 191, 0.5)"
-                  : "none",
+                  : "none"
               }}
             >
               Technical Skills
@@ -1060,9 +1052,9 @@ export default function Home() {
                     { name: "Tailwind CSS", level: "Advanced" },
                     { name: "HTML5 / CSS3", level: "Advanced" },
                     { name: "JavaScript", level: "Advanced" },
-                    { name: "Bootstrap", level: "Intermediate" },
+                    { name: "Bootstrap", level: "Intermediate" }
                   ],
-                  gradient: "from-blue-500 to-cyan-500",
+                  gradient: "from-blue-500 to-cyan-500"
                 },
                 {
                   category: "Backend",
@@ -1072,9 +1064,9 @@ export default function Home() {
                     { name: "Express.js", level: "Advanced" },
                     { name: "ASP.NET Core", level: "Intermediate" },
                     { name: "Laravel", level: "Intermediate" },
-                    { name: "Python", level: "Intermediate" },
+                    { name: "Python", level: "Intermediate" }
                   ],
-                  gradient: "from-purple-500 to-pink-500",
+                  gradient: "from-purple-500 to-pink-500"
                 },
                 {
                   category: "Database",
@@ -1083,9 +1075,9 @@ export default function Home() {
                     { name: "MongoDB", level: "Advanced" },
                     { name: "MySQL", level: "Advanced" },
                     { name: "PostgreSQL", level: "Intermediate" },
-                    { name: "Redis", level: "Intermediate" },
+                    { name: "Redis", level: "Intermediate" }
                   ],
-                  gradient: "from-green-500 to-emerald-500",
+                  gradient: "from-green-500 to-emerald-500"
                 },
                 {
                   category: "DevOps",
@@ -1094,9 +1086,9 @@ export default function Home() {
                     { name: "Docker", level: "Advanced" },
                     { name: "Git", level: "Advanced" },
                     { name: "CI/CD", level: "Intermediate" },
-                    { name: "AWS", level: "Intermediate" },
+                    { name: "AWS", level: "Intermediate" }
                   ],
-                  gradient: "from-orange-500 to-yellow-500",
+                  gradient: "from-orange-500 to-yellow-500"
                 },
                 {
                   category: "Mobile",
@@ -1104,9 +1096,9 @@ export default function Home() {
                   skills: [
                     { name: "React Native", level: "Advanced" },
                     { name: "Flutter", level: "Intermediate" },
-                    { name: "Kotlin", level: "Intermediate" },
+                    { name: "Kotlin", level: "Intermediate" }
                   ],
-                  gradient: "from-red-500 to-rose-500",
+                  gradient: "from-red-500 to-rose-500"
                 },
                 {
                   category: "Tools & Others",
@@ -1115,10 +1107,10 @@ export default function Home() {
                     { name: "VS Code", level: "Advanced" },
                     { name: "Figma", level: "Intermediate" },
                     { name: "Postman", level: "Advanced" },
-                    { name: "Jira", level: "Intermediate" },
+                    { name: "Jira", level: "Intermediate" }
                   ],
-                  gradient: "from-indigo-500 to-violet-500",
-                },
+                  gradient: "from-indigo-500 to-violet-500"
+                }
               ].map((category) => (
                 <Card
                   key={category.category}
@@ -1190,7 +1182,7 @@ export default function Home() {
           style={{
             background: isDarkMode
               ? "linear-gradient(to left, rgb(10, 22, 49), rgb(32, 43, 66))"
-              : "linear-gradient(to left, rgb(199, 206, 224), rgb(163, 192, 255))",
+              : "linear-gradient(to left, rgb(199, 206, 224), rgb(163, 192, 255))"
           }}
         >
           {/* Network Background Canvas */}
@@ -1523,18 +1515,18 @@ export default function Home() {
               style={{
                 backgroundImage:
                   "radial-gradient(circle at 2px 2px, white 1px, transparent 0)",
-                backgroundSize: "32px 32px",
+                backgroundSize: "32px 32px"
               }}
             />
           </div>
 
           <div className="max-w-4xl mx-auto text-center relative z-10">
             <h2 className="text-4xl font-bold mb-8 animate-fadeIn">
-              Let's Work Together
+              Let&apos;s Work Together
             </h2>
             <p className="text-lg mb-8 opacity-90 max-w-2xl mx-auto">
-              I'm always open to discussing new opportunities, collaborations,
-              or just having a chat about technology.
+              II&apos;m always open to discussing new opportunities,
+              collaborations, or just having a chat about technology.
             </p>
             <div className="flex flex-wrap justify-center gap-6">
               <a
