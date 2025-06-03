@@ -20,20 +20,58 @@ import {
   ExternalLink,
   Code,
   Database,
-  Globe,
-  Smartphone,
   Sun,
   Moon,
   Cloud,
   Wrench,
-  HardDrive
+  HardDrive,
+  Smartphone,
+  Terminal,
+  Globe
 } from "lucide-react";
 
 import { Badge } from "../components/ui/badge/badge";
-import Image from "next/image";
 import profilePic from "../public/Image/profilePic.png";
 import resumePDF from "../public/Image/profilePic.png";
 import { NetworkBackground } from "../components/NetworkBackground";
+import {
+  FaJs,
+  FaPython,
+  FaReact,
+  FaCss3Alt,
+  FaHtml5,
+  FaNodeJs,
+  FaDocker,
+  FaGitAlt,
+  FaGithub,
+  FaPhp,
+  FaJava,
+  FaFigma
+} from "react-icons/fa";
+import {
+  SiTypescript,
+  SiTailwindcss,
+  SiExpress,
+  SiMongodb,
+  SiMysql,
+  SiPostgresql,
+  SiRedis,
+  SiFlutter,
+  SiKotlin,
+  SiPostman,
+  SiJira,
+  SiNpm,
+  SiYarn,
+  SiSwagger,
+  SiC,
+  SiCplusplus,
+  SiLaravel,
+  SiSpring,
+  SiSharp
+} from "react-icons/si";
+import { Icon } from "@iconify/react";
+import { siBootstrap, siDotnet, siR } from "simple-icons";
+import Image from "next/image";
 
 export default function Home() {
   const [imageLoading, setImageLoading] = useState(true);
@@ -925,7 +963,7 @@ export default function Home() {
                 </motion.div>
               </a>
               <a
-                href="https://linkedin.com/in/dinil-dulneth-liyanaarachchi"
+                href="https://lk.linkedin.com/in/dinil-dulneth-liyanaarachchi-5b7a06279"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="no-underline"
@@ -1061,12 +1099,80 @@ export default function Home() {
                   category: "Frontend",
                   icon: <Code className="w-6 h-6" />,
                   skills: [
-                    { name: "React / Next.js", level: "Advanced" },
-                    { name: "TypeScript", level: "Advanced" },
-                    { name: "Tailwind CSS", level: "Advanced" },
-                    { name: "HTML5 / CSS3", level: "Advanced" },
-                    { name: "JavaScript", level: "Advanced" },
-                    { name: "Bootstrap", level: "Intermediate" }
+                    {
+                      name: "React / Next.js",
+                      icon: <FaReact className="w-6 h-6 text-cyan-500" />,
+                      level: "Advanced"
+                    },
+                    {
+                      name: "TypeScript",
+                      icon: <SiTypescript className="w-6 h-6 text-blue-600" />,
+                      level: "Advanced"
+                    },
+                    {
+                      name: "Tailwind CSS",
+                      icon: <SiTailwindcss className="w-6 h-6 text-teal-500" />,
+                      level: "Advanced"
+                    },
+                    {
+                      name: "HTML5 / CSS3",
+                      icon: (
+                        <div className="flex gap-1">
+                          <FaHtml5 className="w-6 h-6 text-orange-500" />
+                          <FaCss3Alt className="w-6 h-6 text-blue-500" />
+                        </div>
+                      ),
+                      level: "Advanced"
+                    },
+                    {
+                      name: "JavaScript",
+                      icon: <FaJs className="w-6 h-6 text-yellow-500" />,
+                      level: "Advanced"
+                    },
+                    {
+                      name: "Razor",
+                      icon: (
+                        <span className="w-6 h-6 flex items-center justify-center text-gray-400">
+                          {/* Placeholder icon for Razor */}
+                          <svg
+                            width="20"
+                            height="20"
+                            viewBox="0 0 20 20"
+                            fill="none"
+                          >
+                            <rect
+                              x="2"
+                              y="2"
+                              width="16"
+                              height="16"
+                              rx="4"
+                              fill="currentColor"
+                              opacity="0.2"
+                            />
+                            <path
+                              d="M6 14L14 6M6 6h8v8"
+                              stroke="currentColor"
+                              strokeWidth="1.5"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                            />
+                          </svg>
+                        </span>
+                      ),
+                      level: "Intermediate"
+                    },
+                    {
+                      name: "Bootstrap",
+                      icon: (
+                        <div className="flex gap-1">
+                          <Icon
+                            icon={siBootstrap.slug}
+                            className="w-6 h-6 text-purple-600"
+                          />
+                        </div>
+                      ),
+                      level: "Advanced"
+                    }
                   ],
                   gradient: "from-blue-500 to-cyan-500"
                 },
@@ -1074,22 +1180,115 @@ export default function Home() {
                   category: "Backend",
                   icon: <Database className="w-6 h-6" />,
                   skills: [
-                    { name: "Node.js", level: "Advanced" },
-                    { name: "Express.js", level: "Advanced" },
-                    { name: "ASP.NET Core", level: "Intermediate" },
-                    { name: "Laravel", level: "Intermediate" },
-                    { name: "Python", level: "Intermediate" }
+                    {
+                      name: "Node.js",
+                      icon: <FaNodeJs className="w-6 h-6 text-green-500" />,
+                      level: "Advanced"
+                    },
+                    {
+                      name: "Express.js",
+                      icon: <SiExpress className="w-6 h-6 text-gray-800" />,
+                      level: "Advanced"
+                    },
+                    {
+                      name: "ASP.NET Core",
+                      icon: (
+                        <Icon
+                          icon={siDotnet.slug}
+                          className="w-6 h-6 text-purple-600"
+                        />
+                      ),
+                      level: "Advanced"
+                    },
+                    {
+                      name: "Laravel",
+                      icon: <SiLaravel className="w-6 h-6 text-red-500" />,
+                      level: "Intermediate"
+                    },
+                    {
+                      name: "Spring Boot",
+                      icon: <SiSpring className="w-6 h-6 text-green-600" />,
+                      level: "Intermediate"
+                    },
+                    {
+                      name: "Python",
+                      icon: <FaPython className="w-6 h-6 text-blue-500" />,
+                      level: "Intermediate"
+                    }
                   ],
                   gradient: "from-purple-500 to-pink-500"
+                },
+                {
+                  category: "Programming Languages",
+                  icon: <Terminal className="w-6 h-6" />,
+                  skills: [
+                    {
+                      name: "C",
+                      icon: <SiC className="w-6 h-6 text-blue-600" />,
+                      level: "Advanced"
+                    },
+                    {
+                      name: "C++",
+                      icon: <SiCplusplus className="w-6 h-6 text-blue-700" />,
+                      level: "Advanced"
+                    },
+                    {
+                      name: "C#",
+                      icon: <SiSharp className="w-6 h-6 text-purple-600" />,
+                      level: "Advanced"
+                    },
+                    {
+                      name: "Java",
+                      icon: <FaJava className="w-6 h-6 text-red-600" />,
+                      level: "Intermediate"
+                    },
+                    {
+                      name: "Python",
+                      icon: <FaPython className="w-6 h-6 text-blue-500" />,
+                      level: "Intermediate"
+                    },
+                    {
+                      name: "PHP",
+                      icon: <FaPhp className="w-6 h-6 text-blue-400" />,
+                      level: "Advanced"
+                    },
+                    {
+                      name: "R",
+                      icon: (
+                        <Icon
+                          icon={siR.slug}
+                          className="w-6 h-6 text-blue-500"
+                        />
+                      ),
+                      level: "Intermediate"
+                    }
+                  ],
+                  gradient: "from-lime-500 to-sky-500"
                 },
                 {
                   category: "Database",
                   icon: <HardDrive className="w-6 h-6" />,
                   skills: [
-                    { name: "MongoDB", level: "Advanced" },
-                    { name: "MySQL", level: "Advanced" },
-                    { name: "PostgreSQL", level: "Intermediate" },
-                    { name: "Redis", level: "Intermediate" }
+                    {
+                      name: "MongoDB",
+                      icon: <SiMongodb className="w-6 h-6 text-green-500" />,
+                      level: "Advanced"
+                    },
+                    {
+                      name: "MySQL",
+                      icon: <SiMysql className="w-6 h-6 text-blue-600" />,
+                      level: "Advanced"
+                    },
+                    {
+                      name: "PostgreSQL",
+                      icon: <SiPostgresql className="w-6 h-6 text-blue-700" />,
+                      level: "Intermediate"
+                    },
+                    {
+                      name: "Redis",
+                      icon: <SiRedis className="w-6 h-6 text-red-600" />,
+                      level: "Intermediate"
+                    }
                   ],
                   gradient: "from-green-500 to-emerald-500"
                 },
@@ -1097,10 +1296,50 @@ export default function Home() {
                   category: "DevOps",
                   icon: <Cloud className="w-6 h-6" />,
                   skills: [
-                    { name: "Docker", level: "Advanced" },
-                    { name: "Git", level: "Advanced" },
-                    { name: "CI/CD", level: "Intermediate" },
-                    { name: "AWS", level: "Intermediate" }
+                    {
+                      name: "Docker",
+                      icon: <FaDocker className="w-6 h-6 text-blue-500" />,
+                      level: "Intermediate"
+                    },
+                    {
+                      name: "Git",
+                      icon: <FaGitAlt className="w-6 h-6 text-orange-500" />,
+                      level: "Advanced"
+                    },
+                    {
+                      name: "CI/CD",
+                      icon: (
+                        <svg
+                          className="w-6 h-6 text-gray-600"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"
+                          />
+                        </svg>
+                      ),
+                      level: "Intermediate"
+                    },
+                    {
+                      name: "AWS",
+                      icon: (
+                        <Icon
+                          icon="devicon:aws"
+                          className="w-6 h-6 text-orange-400"
+                        />
+                      ),
+                      level: "Intermediate"
+                    },
+                    {
+                      name: "GitHub",
+                      icon: <FaGithub className="w-6 h-6 text-gray-800" />,
+                      level: "Advanced"
+                    }
                   ],
                   gradient: "from-orange-500 to-yellow-500"
                 },
@@ -1108,9 +1347,21 @@ export default function Home() {
                   category: "Mobile",
                   icon: <Smartphone className="w-6 h-6" />,
                   skills: [
-                    { name: "React Native", level: "Advanced" },
-                    { name: "Flutter", level: "Intermediate" },
-                    { name: "Kotlin", level: "Intermediate" }
+                    {
+                      name: "React Native",
+                      icon: <FaReact className="w-6 h-6 text-cyan-500" />,
+                      level: "Advanced"
+                    },
+                    {
+                      name: "Flutter",
+                      icon: <SiFlutter className="w-6 h-6 text-blue-400" />,
+                      level: "Intermediate"
+                    },
+                    {
+                      name: "Kotlin",
+                      icon: <SiKotlin className="w-6 h-6 text-purple-500" />,
+                      level: "Advanced"
+                    }
                   ],
                   gradient: "from-red-500 to-rose-500"
                 },
@@ -1118,10 +1369,83 @@ export default function Home() {
                   category: "Tools & Others",
                   icon: <Wrench className="w-6 h-6" />,
                   skills: [
-                    { name: "VS Code", level: "Advanced" },
-                    { name: "Figma", level: "Intermediate" },
-                    { name: "Postman", level: "Advanced" },
-                    { name: "Jira", level: "Intermediate" }
+                    {
+                      name: "VS Code",
+                      icon: (
+                        <span className="w-6 h-6 flex items-center justify-center text-gray-400">
+                          {/* Placeholder icon for Razor */}
+                          <svg
+                            width="20"
+                            height="20"
+                            viewBox="0 0 20 20"
+                            fill="none"
+                          >
+                            <rect
+                              x="2"
+                              y="2"
+                              width="16"
+                              height="16"
+                              rx="4"
+                              fill="currentColor"
+                              opacity="0.2"
+                            />
+                            <path
+                              d="M6 14L14 6M6 6h8v8"
+                              stroke="currentColor"
+                              strokeWidth="1.5"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                            />
+                          </svg>
+                        </span>
+                      ),
+                      level: "Advanced"
+                    },
+                    {
+                      name: "Figma",
+                      icon: <FaFigma className="w-6 h-6 text-purple-500" />,
+                      level: "Advanced"
+                    },
+                    {
+                      name: "Postman",
+                      icon: <SiPostman className="w-6 h-6 text-orange-500" />,
+                      level: "Advanced"
+                    },
+                    {
+                      name: "Visual Studio",
+                      icon: (
+                        <Icon
+                          icon="devicon:visualstudio"
+                          className="w-6 h-6 text-blue-600"
+                        />
+                      ),
+                      level: "Advanced"
+                    },
+                    {
+                      name: "Jira",
+                      icon: <SiJira className="w-6 h-6 text-blue-500" />,
+                      level: "Intermediate"
+                    },
+                    {
+                      name: "GitHub",
+                      icon: <FaGithub className="w-6 h-6 text-gray-800" />,
+                      level: "Advanced"
+                    },
+                    {
+                      name: "npm / Yarn",
+                      icon: (
+                        <div className="flex gap-1">
+                          <SiNpm className="w-6 h-6 text-red-500" />
+                          <SiYarn className="w-6 h-6 text-blue-400" />
+                        </div>
+                      ),
+                      level: "Advanced"
+                    },
+                    {
+                      name: "Swagger",
+                      icon: <SiSwagger className="w-6 h-6 text-green-500" />,
+                      level: "Advanced"
+                    }
                   ],
                   gradient: "from-indigo-500 to-violet-500"
                 }
@@ -1154,26 +1478,59 @@ export default function Home() {
                       {category.skills.map((skill) => (
                         <div
                           key={skill.name}
-                          className={`p-2 rounded-lg border ${
+                          className={`p-3 rounded-lg border ${
                             isDarkMode
                               ? "border-gray-700 hover:border-gray-600"
                               : "border-gray-200 hover:border-gray-300"
                           } transition-all duration-300 hover:shadow-md`}
                         >
-                          <p
-                            className={`text-sm font-medium ${
-                              isDarkMode ? "text-white" : "text-gray-800"
-                            }`}
-                          >
-                            {skill.name}
-                          </p>
-                          <span
-                            className={`text-xs ${
-                              isDarkMode ? "text-gray-400" : "text-gray-600"
-                            }`}
-                          >
-                            {skill.level}
-                          </span>
+                          <div className="flex justify-between items-center p-1">
+                            {/* Left side - Name and Level */}
+                            <div className="flex flex-col">
+                              <p
+                                className={`text-sm font-medium ${
+                                  isDarkMode ? "text-white" : "text-gray-800"
+                                }`}
+                              >
+                                {skill.name}
+                              </p>
+                              <span
+                                className={`text-xs mt-1 ${
+                                  isDarkMode ? "text-gray-400" : "text-gray-600"
+                                }`}
+                              >
+                                {skill.level}
+                              </span>
+                            </div>
+
+                            {/* Right side - Icon */}
+                            <div
+                              className={`w-8 h-8 flex items-center justify-center ${
+                                isDarkMode ? "text-gray-300" : "text-gray-600"
+                              }`}
+                            >
+                              {/* <div
+                                className={`w-4 h-4 ${
+                                  isDarkMode ? "text-gray-300" : "text-gray-600"
+                                }`}
+                              >
+                                {skill.icon}
+                              </div> */}
+                              {typeof skill.icon === "string" ? (
+                                <Image
+                                  src={skill.icon}
+                                  alt={`${skill.name} icon`}
+                                  width={20}
+                                  height={20}
+                                  className="w-4 h-4 object-contain"
+                                />
+                              ) : (
+                                <div className="w-10 h-10 flex items-center justify-center">
+                                  {skill.icon}
+                                </div>
+                              )}
+                            </div>
+                          </div>
                         </div>
                       ))}
                     </div>
@@ -1226,12 +1583,21 @@ export default function Home() {
                   ></div>
                   <CardHeaderComponent>
                     <div className="flex items-center justify-between">
-                      <CardTitle className="text-lg group-hover:text-purple-400 transition-colors">
+                      <CardTitle
+                        className={`text-lg group-hover:text-purple-400 transition-colors ${
+                          isDarkMode ? "text-white" : "text-black"
+                        }`}
+                      >
                         {project.title}
                       </CardTitle>
                       <ExternalLink className="w-5 h-5 text-gray-400 group-hover:text-purple-400 transition-colors" />
                     </div>
-                    <Badge variant="outline" className="w-fit">
+                    <Badge
+                      variant="outline"
+                      className={`w-fit ${
+                        isDarkMode ? "text-white" : "text-black"
+                      }`}
+                    >
                       {project.type}
                     </Badge>
                   </CardHeaderComponent>
@@ -1560,7 +1926,7 @@ export default function Home() {
                 </Button>
               </a>
               <a
-                href="https://linkedin.com/in/dinil-dulneth-liyanaarachchi"
+                href="https://lk.linkedin.com/in/dinil-dulneth-liyanaarachchi-5b7a06279"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="no-underline"
@@ -1600,7 +1966,7 @@ export default function Home() {
                 <Github className="w-5 h-5" />
               </a>
               <a
-                href="https://linkedin.com/in/dinil-dulneth-liyanaarachchi"
+                href="https://lk.linkedin.com/in/dinil-dulneth-liyanaarachchi-5b7a06279"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`hover:scale-110 transition-transform ${
